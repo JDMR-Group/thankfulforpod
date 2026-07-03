@@ -898,8 +898,7 @@
 
     // Live episode feed via iTunes Search API
     (async function loadEpisodes() {
-      const ITUNES_ID = '1592192374';
-      const API = `https://itunes.apple.com/lookup?id=${ITUNES_ID}&entity=podcastEpisode&limit=4&sort=recent`;
+      const API = '/.netlify/functions/episodes';
       const list = document.getElementById('episode-list');
 
       function fmtDur(ms) {
