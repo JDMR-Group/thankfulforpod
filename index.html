@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Am I Thankful For | Joe, Desiree &amp; Maddux Remillet</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Joe and Desiree Remillet share their unfiltered story of raising Maddux — 1 in 100 million — with spina bifida and achondroplasia. A podcast and family page rooted in gratitude." />
+  <meta name="theme-color" content="#2E5828" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="What Am I Thankful For | The Remillet Family" />
+  <meta property="og:description" content="1 in 100 million. That's our son Maddux. Joe &amp; Desiree Remillet share their family's story — spina bifida, achondroplasia, and the gratitude found in every hard chapter." />
+  <meta property="og:image"       content="hero.jpg" />
+  <meta property="og:url"         content="https://www.thankfulforpod.com" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="What Am I Thankful For | The Remillet Family" />
+  <meta name="twitter:description" content="1 in 100 million. That's our son Maddux. A family podcast about spina bifida, achondroplasia, and gratitude." />
+  <meta name="twitter:image"       content="hero.jpg" />
+
+  <!-- Preconnect & preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://itunes.apple.com" />
+  <link rel="preconnect" href="https://open.spotify.com" />
+  <link rel="preconnect" href="https://w.behold.so" />
+  <link rel="preload" as="image" href="hero.jpg" />
+  <link rel="canonical" href="https://www.thankfulforpod.com" />
+
+  <!-- Behold Instagram widget -->
+  <script>
+    (() => {
+      const d=document,s=d.createElement("script");s.type="module";
+      s.src="https://w.behold.so/widget.js";d.head.append(s);
+    })();
+  </script>
+
+  <!-- Fonts: Playfair Display + DM Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      /* Forest greens */
+      --forest:        #1C3A1A;
+      --forest-mid:    #2E5828;
+      --forest-light:  #487840;
+      --sage:          #78A868;
+      --sage-soft:     #A8C898;
+      --sage-tint:     #EAF2E3;
+
+      /* Lichen gold — the yellow-gold on the bark in the hero */
+      --lichen:        #B89A1C;
+      --lichen-warm:   #CEB030;
+      --lichen-light:  #F2E8B0;
+
+      /* Earth / bark */
+      --earth:         #5A3D28;
+      --earth-mid:     #8A6444;
+      --earth-light:   #D8C4A8;
+
+      /* Neutrals */
+      --cream:         #F4F1EB;
+      --warm-white:    #FAFAF5;
+      --night:         #121A10;
+
+      /* Text */
+      --text:          #1A2418;
+      --text-mid:      #465840;
+      --text-light:    #788A70;
+
+      --radius: 14px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      background: transparent;
+      border-bottom: 1px solid transparent;
+      z-index: 999;
+      transition: background 0.3s, border-color 0.3s, backdrop-filter 0.3s;
+    }
+
+    nav.scrolled {
+      background: rgba(244, 241, 235, 0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(74, 120, 64, 0.14);
+    }
+
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.01em;
+      transition: color 0.3s;
+      text-shadow: 0 1px 10px rgba(18,26,16,0.6);
+      text-decoration: none;
+    }
+
+    nav.scrolled .nav-brand { color: var(--forest-mid); text-shadow: none; }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.9);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+      text-shadow: 0 1px 6px rgba(18,26,16,0.55);
+    }
+
+    nav.scrolled .nav-links a { color: var(--text-mid); text-shadow: none; }
+    .nav-links a:hover { color: var(--lichen-warm); }
+    nav.scrolled .nav-links a:hover { color: var(--forest-mid); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+      padding: 6rem 2rem 8rem;
+      background-image: url('hero.jpg');
+      background-size: cover;
+      background-position: center 40%;
+      background-attachment: scroll;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(18, 26, 16, 0.32) 0%,
+        rgba(18, 26, 16, 0.04) 35%,
+        rgba(18, 26, 16, 0.55) 65%,
+        rgba(18, 26, 16, 0.88) 100%
+      );
+      pointer-events: none;
+    }
+
+    .hero > * { position: relative; z-index: 1; }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 7vw, 5.2rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.08;
+      margin-bottom: 0.75rem;
+      max-width: 720px;
+      text-shadow: 0 2px 28px rgba(18,26,16,0.65);
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: #fff;
+    }
+
+    .hero-sub {
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      color: rgba(255,255,255,0.86);
+      max-width: 520px;
+      margin: 0 auto 2rem;
+      font-weight: 300;
+      line-height: 1.8;
+      text-shadow: 0 1px 10px rgba(18,26,16,0.6);
+    }
+
+    .stat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: rgba(18, 26, 16, 0.58);
+      border: 1px solid rgba(206, 176, 48, 0.52);
+      border-radius: 100px;
+      padding: 0.6rem 1.5rem;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .stat-pill .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--lichen-warm);
+    }
+
+    .stat-pill .label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.35;
+      text-align: left;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.75rem;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.22s;
+      letter-spacing: 0.02em;
+    }
+
+
+    .btn-primary {
+      background: var(--forest-mid);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(28, 58, 26, 0.5);
+    }
+
+    .btn-primary:hover {
+      background: var(--forest-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(28, 58, 26, 0.6);
+    }
+
+    .btn-outline {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.58);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.22);
+      transform: translateY(-2px);
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 5.5rem 2rem; }
+
+    .container {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--forest-light);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+
+    .section-body {
+      font-size: 1.02rem;
+      color: var(--text-mid);
+      line-height: 1.9;
+      max-width: 640px;
+    }
+
+    /* ── OUR STORY ── */
+    .story { background: var(--warm-white); }
+
+    .story-grid {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .story-text .names {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--forest-light);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .story-text .names::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 2px;
+      background: var(--lichen);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .story-text .section-body {
+      max-width: 100%;
+    }
+
+    .story-text .section-body + .section-body {
+      margin-top: 1.5rem;
+    }
+
+    /* ── PODCAST ── */
+    .podcast { background: var(--sage-tint); }
+
+    .podcast .section-title,
+    .podcast .section-body { max-width: 680px; }
+
+    .ep-list-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .ep-list {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(72, 120, 64, 0.16);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--warm-white);
+      box-shadow: 0 2px 18px rgba(28, 58, 26, 0.07);
+    }
+
+    .ep-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      padding: 1.4rem 1.5rem;
+      border-bottom: 1px solid rgba(72, 120, 64, 0.1);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.15s;
+    }
+
+    .ep-card:last-child { border-bottom: none; }
+    .ep-card:hover { background: var(--sage-tint); }
+
+    .ep-card-body { flex: 1; min-width: 0; }
+
+    .ep-card-title {
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--text);
+      margin-bottom: 0.25rem;
+      line-height: 1.4;
+    }
+
+    .ep-card-meta {
+      font-size: 0.74rem;
+      color: var(--text-light);
+      margin-bottom: 0.4rem;
+    }
+
+    .ep-card-desc {
+      font-size: 0.8rem;
+      color: var(--text-mid);
+      line-height: 1.55;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .ep-card-arrow {
+      flex-shrink: 0;
+      color: var(--forest-light);
+      font-size: 1.1rem;
+      margin-top: 2px;
+      opacity: 0.55;
+      transition: opacity 0.15s, transform 0.15s;
+    }
+
+    .ep-card:hover .ep-card-arrow { opacity: 1; transform: translateX(3px); }
+
+    .ep-skeleton {
+      height: 88px;
+      border-bottom: 1px solid rgba(72, 120, 64, 0.08);
+      background: linear-gradient(90deg, #eaf2e3 25%, #ddecd2 50%, #eaf2e3 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+    }
+
+    .ep-skeleton:last-child { border-bottom: none; }
+
+    @keyframes shimmer {
+      0%   { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* ── FEATURED EPISODE ── */
+    .featured-ep {
+      margin-top: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--warm-white);
+      border: 1px solid rgba(72, 120, 64, 0.18);
+      box-shadow: 0 4px 32px rgba(28, 58, 26, 0.1);
+      text-decoration: none;
+      display: block;
+      color: inherit;
+      transition: box-shadow 0.2s;
+    }
+
+    .featured-ep:hover {
+      box-shadow: 0 8px 40px rgba(28, 58, 26, 0.18);
+    }
+
+    .featured-ep-inner {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .featured-ep-art {
+      width: 200px;
+      min-height: 200px;
+      flex-shrink: 0;
+      overflow: hidden;
+      background: var(--sage-tint);
+    }
+
+    .featured-ep-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .featured-ep-body {
+      padding: 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .featured-ep-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--forest-light);
+    }
+
+    .featured-ep-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .featured-ep-meta {
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    .featured-ep-desc {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      line-height: 1.65;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .featured-ep-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--forest-mid);
+      color: #fff;
+      padding: 0.55rem 1.25rem;
+      border-radius: 100px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      width: fit-content;
+      margin-top: 0.25rem;
+      transition: background 0.2s;
+    }
+
+    .featured-ep:hover .featured-ep-cta { background: var(--forest-light); }
+
+    .featured-ep-skeleton {
+      height: 200px;
+      background: linear-gradient(90deg, #eaf2e3 25%, #ddecd2 50%, #eaf2e3 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+    }
+
+    @media (max-width: 600px) {
+      .featured-ep-inner { flex-direction: column; }
+      .featured-ep-art { width: 100%; min-height: 180px; max-height: 220px; }
+    }
+
+    .podcast-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .pod-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.48rem 1rem;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: none;
+      background: rgba(72, 120, 64, 0.1);
+      color: var(--text);
+      border: 1px solid rgba(72, 120, 64, 0.22);
+      transition: all 0.2s;
+    }
+
+    .pod-link:hover {
+      background: var(--forest-mid);
+      color: #fff;
+      border-color: var(--forest-mid);
+      transform: translateY(-1px);
+    }
+
+    /* ── GALLERY / INSTAGRAM ── */
+    .gallery {
+      background: var(--cream);
+      padding-top: 2rem;
+      padding-bottom: 4rem;
+    }
+
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .ig-embed-wrap {
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--sage-tint);
+      min-height: 320px;
+    }
+
+    .btn-ig {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #fff;
+      padding: 0.7rem 1.6rem;
+      border-radius: 100px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.22s;
+      box-shadow: 0 4px 16px rgba(220, 39, 67, 0.28);
+    }
+
+    .btn-ig:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(220, 39, 67, 0.4);
+    }
+
+    /* ── CONNECT ── */
+    .connect {
+      background: var(--forest);
+      text-align: center;
+    }
+
+    .connect .section-label { color: var(--sage-soft); }
+    .connect .section-title { color: #fff; text-align: center; }
+    .connect .section-body {
+      color: rgba(255,255,255,0.68);
+      margin: 0 auto 2.5rem;
+      text-align: center;
+    }
+
+    .social-row {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.72rem 1.4rem;
+      border-radius: 100px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.22s;
+    }
+
+    .social-btn.instagram {
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #fff;
+    }
+
+    .social-btn.facebook {
+      background: #1877F2;
+      color: #fff;
+    }
+
+    .social-btn.tiktok {
+      background: #fff;
+      color: #1a1a1a;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(0,0,0,0.25);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--night);
+      color: rgba(255,255,255,0.45);
+      text-align: center;
+      padding: 2.5rem 2rem;
+      font-size: 0.82rem;
+      line-height: 1.8;
+    }
+
+    footer .foot-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: #fff;
+      margin-bottom: 0.4rem;
+      font-style: normal;
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.38);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: var(--lichen-warm); }
+
+    /* ── RESPONSIVE — tablet (≤ 768px): reduce padding, keep nav ── */
+    @media (max-width: 768px) {
+      section { padding: 4rem 1.5rem; }
+      .gallery { padding-top: 1.5rem; padding-bottom: 3rem; }
+      .story-grid { max-width: 100%; }
+      .podcast-links { justify-content: center; }
+      .container { padding: 0 0.25rem; }
+    }
+
+    /* ── RESPONSIVE — phone (≤ 600px): hide nav, compress layout ── */
+    @media (max-width: 600px) {
+      nav { padding: 0 1.25rem; }
+      .nav-links { display: none; }
+      section { padding: 3.5rem 1.25rem; }
+    }
+
+    /* ── RESPONSIVE — small phone (≤ 480px) ── */
+    @media (max-width: 480px) {
+      .hero { padding: 5rem 1.25rem 5.5rem; background-position: center 30%; }
+      .hero h1 { font-size: 2.2rem; }
+      .stat-pill { flex-direction: column; text-align: center; gap: 0.35rem; padding: 0.75rem 1.25rem; border-radius: 18px; }
+      .hero-cta { flex-direction: column; align-items: stretch; }
+      .btn { text-align: center; max-width: 300px; margin: 0 auto; display: block; }
+      .section-title { font-size: 1.65rem; }
+      .social-row { flex-direction: column; align-items: center; }
+      .social-btn { width: 220px; justify-content: center; }
+      .podcast-links { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ── TOUCH: disable hover lift on tap devices ── */
+    @media (hover: none) {
+      .btn:hover,
+      .pod-link:hover,
+      .social-btn:hover,
+      .btn-ig:hover { transform: none !important; box-shadow: none !important; }
+      .ep-card:hover .ep-card-arrow { transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav aria-label="Main navigation">
+    <a href="#" class="nav-brand">What Am I Thankful For</a>
+    <ul class="nav-links" role="list">
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#podcast">Podcast</a></li>
+      <li><a href="#gallery">Our Life</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>What Am I<br /><em>Thankful For</em></h1>
+    <p class="hero-sub">
+      A family finding gratitude in every chapter &mdash; the hard ones, the beautiful ones,
+      and all the ones in between.
+    </p>
+    <div class="stat-pill">
+      <span class="num">1 in 100M</span>
+      <span class="label">That&rsquo;s our son Maddux.<br />Spina Bifida + Achondroplasia.</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#story" class="btn btn-primary">Our Story</a>
+      <a href="#podcast" class="btn btn-outline">Listen to the Podcast</a>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="story" id="story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-text">
+          <p class="names">Joe &amp; Desiree Remillet</p>
+          <div class="section-label">Our Story</div>
+          <h2 class="section-title">Life took us somewhere we never expected and we found what matters most there.</h2>
+          <p class="section-body">
+            Our journey started long before Maddux arrived &mdash; with years of unexplained infertility,
+            heartbreak and the kind of faith that only grows under pressure. We were told it might
+            not happen for us. Then it did &mdash; and it came with a diagnosis we didn&rsquo;t see coming.
+          </p>
+          <p class="section-body">
+            Maddux was born with both spina bifida (myelomeningocele) and achondroplasia. The odds of
+            one person having both conditions are approximately 1 in 100 million. We didn&rsquo;t know
+            that when we brought him home. We just knew we loved him, that he was going to need
+            everything we had, and that we were going to figure it out one day at a time.
+          </p>
+          <p class="section-body">
+            What we didn&rsquo;t expect was how much he would teach us. About patience. About advocacy.
+            About what it actually means to fight for someone. Maddux is now eleven years old, a full-time
+            wheelchair user, an award-winning documentary filmmaker and the most determined person
+            either of us has ever met. He has made us better at everything &mdash; parenting, marriage,
+            work, faith and showing up for people when it&rsquo;s hard.
+          </p>
+          <p class="section-body">
+            This podcast is our attempt to share that honestly. Not the highlight reel &mdash; the
+            real story. The school district fights. The hospital stays. The moments of pure joy that
+            only come after something hard. We started it in 2020, paused when life demanded it, and
+            now we&rsquo;re back &mdash; because somewhere out there, another family just got a
+            diagnosis and needs to know they&rsquo;re not alone.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PODCAST -->
+  <section class="podcast" id="podcast">
+    <div class="container">
+      <div class="section-label">The Podcast</div>
+      <h2 class="section-title">What Am I Thankful For</h2>
+      <p class="section-body" style="margin-bottom:2.5rem;">
+        Joe and Desiree Remillet share their family&rsquo;s story &mdash; from unexplained infertility
+        to raising Maddux, one of the rarest kids on earth. Raw, honest, and full of gratitude
+        for the hard chapters. New episodes dropping now.
+      </p>
+
+      <div class="ep-list-label">Latest Episodes</div>
+      <div id="episode-list" class="ep-list">
+        <div class="ep-skeleton"></div>
+        <div class="ep-skeleton"></div>
+        <div class="ep-skeleton"></div>
+      </div>
+
+      <div class="podcast-links" style="margin-top:2rem;margin-bottom:2.5rem;">
+        <a class="pod-link" href="https://open.spotify.com/show/3txVroU4M8fes4Dctr1c3U" target="_blank" rel="noopener">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+          All Episodes on Spotify
+        </a>
+        <a class="pod-link" href="https://podcasts.apple.com/us/podcast/what-am-i-thankful-for/id1592192374" target="_blank" rel="noopener">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+          Apple Podcasts
+        </a>
+        <a class="pod-link" href="https://anchor.fm/s/62f43de8/podcast/rss" target="_blank" rel="noopener">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+          RSS Feed
+        </a>
+      </div>
+
+      <!-- FEATURED LATEST EPISODE — populated by JS -->
+      <a id="featured-ep" class="featured-ep" style="pointer-events:none;">
+        <div class="featured-ep-skeleton"></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM FEED -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="gallery-header">
+        <div class="section-label">Our Life</div>
+        <h2 class="section-title">The real, unfiltered version</h2>
+        <p style="font-size:0.88rem;color:var(--text-light);margin-top:0.5rem;">Updated every time we post &mdash; follow along in real time.</p>
+      </div>
+
+      <div class="ig-embed-wrap" id="ig-feed">
+        <behold-widget feed-id="hjCFcYMXqIMBYVzM3KZW"></behold-widget>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <section class="connect" id="connect">
+    <div class="container">
+      <div class="section-label">Follow Along</div>
+      <h2 class="section-title">Find us where you are</h2>
+      <p class="section-body">
+        We share the day-to-day on Instagram, Facebook and TikTok &mdash; the wins, the fights, the gratitude
+        and the moments that remind us why we keep going.
+      </p>
+      <div class="social-row">
+        <a class="social-btn instagram" href="https://instagram.com/whatamithankfulfor" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          Instagram
+        </a>
+        <a class="social-btn facebook" href="https://www.facebook.com/WhatAmIThankfulForPod" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          Facebook
+        </a>
+        <a class="social-btn tiktok" href="https://tiktok.com/@whatamithankfulfor" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
+          </svg>
+          TikTok
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot-name">What Am I Thankful For</div>
+    <p>WhatAmIThankfulFor &nbsp;&middot;&nbsp; <a href="mailto:thankfulforpod@gmail.com">thankfulforpod@gmail.com</a></p>
+    <p style="margin-top:0.4rem;">&copy; 2026 WhatAmIThankfulFor</p>
+  </footer>
+
+  <script>
+    // Nav scroll behavior
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 80);
+    }, { passive: true });
+
+    // Live episode feed via iTunes Search API
+    (async function loadEpisodes() {
+      const ITUNES_ID = '1592192374';
+      const API = `https://itunes.apple.com/lookup?id=${ITUNES_ID}&entity=podcastEpisode&limit=4&sort=recent`;
+      const list = document.getElementById('episode-list');
+
+      function fmtDur(ms) {
+        if (!ms) return '';
+        const m = Math.round(ms / 60000);
+        return m > 59 ? `${Math.floor(m/60)}h ${m%60}m` : `${m} min`;
+      }
+
+      function fmtDate(s) {
+        return new Date(s).toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
+      }
+
+      const featuredEl = document.getElementById('featured-ep');
+
+      try {
+        const res  = await fetch(API);
+        const data = await res.json();
+        const eps  = data.results.filter(r => r.kind === 'podcast-episode').slice(0, 3);
+        if (!eps.length) throw new Error('no episodes');
+
+        // Episode cards (top 3)
+        list.innerHTML = eps.map(ep => {
+          const title   = ep.trackName || 'Episode';
+          const date    = fmtDate(ep.releaseDate);
+          const dur     = fmtDur(ep.trackTimeMillis);
+          const link    = ep.trackViewUrl || 'https://podcasts.apple.com/us/podcast/what-am-i-thankful-for/id1592192374';
+          const desc    = (ep.description || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+          const excerpt = desc.length > 180 ? desc.slice(0, 180) + '…' : desc;
+          return `
+            <a class="ep-card" href="${link}" target="_blank" rel="noopener">
+              <div class="ep-card-body">
+                <div class="ep-card-title">${title}</div>
+                <div class="ep-card-meta">${date}${dur ? ' &nbsp;·&nbsp; ' + dur : ''}</div>
+                <div class="ep-card-desc">${excerpt}</div>
+              </div>
+              <div class="ep-card-arrow">&#8594;</div>
+            </a>`;
+        }).join('');
+
+        // Featured latest episode widget
+        const ep      = eps[0];
+        const art     = ep.artworkUrl600 || ep.artworkUrl100 || '';
+        const appleLink = ep.trackViewUrl || 'https://podcasts.apple.com/us/podcast/what-am-i-thankful-for/id1592192374';
+        const desc    = (ep.description || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+        const excerpt = desc.length > 320 ? desc.slice(0, 320) + '…' : desc;
+
+        featuredEl.style.pointerEvents = '';
+        featuredEl.href = appleLink;
+        featuredEl.target = '_blank';
+        featuredEl.rel = 'noopener';
+        featuredEl.setAttribute('aria-label', `Listen to ${ep.trackName} on Apple Podcasts`);
+        featuredEl.innerHTML = `
+          <div class="featured-ep-inner">
+            ${art ? `<div class="featured-ep-art"><img src="${art}" alt="${ep.trackName} episode artwork" loading="lazy" /></div>` : ''}
+            <div class="featured-ep-body">
+              <div class="featured-ep-label">Latest Episode</div>
+              <div class="featured-ep-title">${ep.trackName}</div>
+              <div class="featured-ep-meta">${fmtDate(ep.releaseDate)}${fmtDur(ep.trackTimeMillis) ? ' &nbsp;·&nbsp; ' + fmtDur(ep.trackTimeMillis) : ''}</div>
+              ${excerpt ? `<div class="featured-ep-desc">${excerpt}</div>` : ''}
+              <div class="featured-ep-cta">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+                Listen on Apple Podcasts
+              </div>
+            </div>
+          </div>`;
+
+      } catch (e) {
+        list.innerHTML = `
+          <div style="padding:1.5rem;text-align:center;">
+            <a href="https://podcasts.apple.com/us/podcast/what-am-i-thankful-for/id1592192374"
+               target="_blank" rel="noopener"
+               style="color:var(--forest-light);font-weight:600;font-size:0.88rem;text-decoration:none;">
+              View all episodes on Apple Podcasts &#8594;
+            </a>
+          </div>`;
+        featuredEl.style.display = 'none';
+      }
+    })();
+  </script>
+
+</body>
+</html>
