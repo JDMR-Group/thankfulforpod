@@ -1,6 +1,6 @@
 exports.handler = async function () {
   const res = await fetch(
-    'https://itunes.apple.com/lookup?id=1592192374&entity=podcastEpisode&limit=4&sort=recent'
+    'https://itunes.apple.com/lookup?id=1592192374&entity=podcastEpisode&limit=100&sort=recent'
   );
   const data = await res.json();
   return {
