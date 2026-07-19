@@ -1,5 +1,5 @@
 const HANDLE = '@whatamithankfulfor';
-const API_KEY = process.env.YOUTUBE_API_KEY;
+const API_KEY = process.env.YoutubeAPI;
 const SHORT_MAX_SECONDS = 185; // YouTube's Shorts ceiling is 3:00; small buffer for rounding
 
 async function ytFetch(path, params) {
@@ -27,7 +27,7 @@ exports.handler = async function () {
   };
 
   if (!API_KEY) {
-    return { statusCode: 500, headers, body: JSON.stringify({ error: 'Missing YOUTUBE_API_KEY' }) };
+    return { statusCode: 500, headers, body: JSON.stringify({ error: 'Missing YoutubeAPI env var' }) };
   }
 
   try {
