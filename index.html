@@ -89,13 +89,10 @@
     }
 
     /* ── HEADER ── */
-    .site-header {
+    .utility-bar {
       position: sticky;
       top: 0;
-      z-index: 999;
-    }
-
-    .utility-bar {
+      z-index: 1000;
       background: var(--night);
     }
 
@@ -186,15 +183,26 @@
 
     .brand-bar {
       background: var(--warm-white);
-      border-bottom: 1px solid rgba(74, 120, 64, 0.14);
     }
 
     .brand-bar-inner {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.6rem;
+      justify-content: center;
       padding: 1.25rem 2.5rem 1rem;
+    }
+
+    .nav-bar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: var(--warm-white);
+      border-bottom: 1px solid rgba(74, 120, 64, 0.14);
+    }
+
+    .nav-bar-inner {
+      display: flex;
+      justify-content: center;
+      padding: 0.85rem 2.5rem;
     }
 
     .site-logo img {
@@ -668,6 +676,7 @@
       .utility-social { gap: 0.7rem; }
       .brand-bar-inner { padding: 1rem 1.25rem; }
       .site-logo img { height: 218px; }
+      .nav-bar-inner { padding: 0.65rem 1.25rem; }
       .nav-links { flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.25rem; }
       .nav-links a { font-size: 0.92rem; }
       section { padding: 3.5rem 1.25rem; }
@@ -723,20 +732,26 @@
         </div>
       </div>
     </div>
-    <div class="brand-bar">
-      <div class="container brand-bar-inner">
-        <a href="#" class="site-logo">
-          <img src="logo.png" alt="What Am I Thankful For" />
-        </a>
-        <ul class="nav-links" role="list">
-          <li><a href="#story">Our Story</a></li>
-          <li><a href="#podcast">Podcast</a></li>
-          <li><a href="#gallery">Our Life</a></li>
-          <li><a href="#connect">Connect</a></li>
-        </ul>
-      </div>
-    </div>
   </header>
+
+  <div class="brand-bar">
+    <div class="container brand-bar-inner">
+      <a href="#" class="site-logo">
+        <img src="logo.png" alt="What Am I Thankful For" />
+      </a>
+    </div>
+  </div>
+
+  <nav class="nav-bar" aria-label="Main navigation">
+    <div class="container nav-bar-inner">
+      <ul class="nav-links" role="list">
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#podcast">Podcast</a></li>
+        <li><a href="#gallery">Our Life</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- HERO -->
   <section class="hero"></section>
@@ -886,6 +901,16 @@
   </footer>
 
   <script>
+    // Keep the nav bar pinned directly under the utility bar (logo scrolls away above it)
+    function pinNavBar() {
+      const utilityBar = document.querySelector('.utility-bar');
+      const navBar = document.querySelector('.nav-bar');
+      if (!utilityBar || !navBar) return;
+      navBar.style.top = utilityBar.offsetHeight + 'px';
+    }
+    pinNavBar();
+    window.addEventListener('resize', pinNavBar);
+
     // Live episode feed via iTunes Search API
     (async function loadEpisodes() {
       const API = '/.netlify/functions/episodes';
